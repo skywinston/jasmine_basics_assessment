@@ -15,3 +15,21 @@ describe('letterGrader', function(){
     expect(code.letterGrader(59)).toEqual("F");
   });
 });
+
+describe('averageScore', function(){
+  it('takes an array of test scores and returns the average score', function(){
+    var scores = [90, 95, 87, 60];
+    expect(code.averageScore(scores)).toEqual(83);
+  });
+});
+
+describe('medianScore', function(){
+  it('takes an odd array of test scores and returns the middle value', function(){
+    expect(code.medianScore([1,3,5,6,9])).toEqual(5);
+  });
+
+  it('takes an even array of test scores and returns the average of the middle values', function(){
+    expect(code.medianScore([23,45,67,89,96,99])).toEqual(78);
+    expect(code.medianScore([1,4,7,9,12,15,25,46])).toEqual(10.5);
+  })
+})

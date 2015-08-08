@@ -24,6 +24,22 @@ module.exports = {
     } else if (score < 60){
       return "F";
     }
-  }
+  },
+
+  averageScore: function(scores){
+    return (scores.reduce(function(prev, curr){
+      return prev + curr;
+    },0)) / scores.length;
+  },
+
+  medianScore: function(scores){
+    var result;
+    if (scores.length % 2 == 0){
+      result = ((scores[scores.length/2] + scores[scores.length/2-1]) / 2);
+    } else if (scores.length % 2 !== 0) {
+      result = scores[(scores.length-1)/2];
+    }
+    return result;
+    }
 
 }
