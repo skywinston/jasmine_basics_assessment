@@ -31,11 +31,12 @@ describe('medianScore', function(){
   it('takes an even array of test scores and returns the average of the middle values', function(){
     expect(code.medianScore([23,45,67,89,96,99])).toEqual(78);
     expect(code.medianScore([1,4,7,9,12,15,25,46])).toEqual(10.5);
-  })
-})
+  });
+});
 
 describe('modeScore', function(){
   it('takes an array of numbers and returns the number that appears most', function(){
     expect(code.modeScore([82, 92, 75, 91, 92, 89, 95, 100, 86])).toEqual(92);
-  })
-})
+    expect(code.modeScore([82, 92, 75, 91, 92, 89, 95, 100, 86, 86, 86])).toEqual(86);
+  });
+});
