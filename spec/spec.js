@@ -33,3 +33,9 @@ describe('medianScore', function(){
     expect(code.medianScore([1,4,7,9,12,15,25,46])).toEqual(10.5);
   })
 })
+
+describe('modeScore', function(){
+  it('takes an array of numbers and returns the number that appears most', function(){
+    expect(code.modeScore([82, 92, 75, 91, 92, 89, 95, 100, 86])).toEqual(92);
+  })
+})
